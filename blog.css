@@ -1,0 +1,365 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+    background: black;
+}
+
+.logo img {
+    width: 100px;
+    margin-left: 100px;
+    filter: drop-shadow(
+        0 4px 8px rgba(255, 255, 255, 0.9)
+    );
+}
+
+.logo ul li {
+    list-style-type: none;
+    padding: 5px;
+    margin-right: 80px;
+}
+
+
+.logo nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 2px;
+}
+
+.logo nav li:not(:last-child) {
+    margin-right: 280px;
+}
+
+.logo nav a {
+    position: absolute;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-top: -70px;
+    margin-left: 580px;
+}
+
+.logo nav a:hover {
+    background: red;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.671);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+
+.logo nav a,
+.target {
+    transition: all .35s ease-in-out;
+}
+
+/* cuerpo de pagina  */
+
+.cuerpo {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(img/gtag.webp);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 80vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin-right: 120px;
+    margin-top: -160px;
+    text-align: center;
+    color: rgb(255, 0, 0); 
+}
+
+.cuerpo p {
+    position: absolute;
+    margin-right: 120px;
+    font-size: 20px;
+    max-width: 450px;
+    text-align: center;
+    color: aliceblue;
+}
+
+
+.button-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 65%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.button-play button {
+    border: none;
+    border-radius: 9px;
+    background: black;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.button-play button a {
+    text-decoration: none;
+    color: aliceblue;
+    filter: drop-shadow(
+        0 -1px 5px rgba(255, 255, 255, 0.9)
+    );
+    transition: all 1s ease-in-out;
+}
+
+.button-play button a:hover {
+    color: red;
+    filter: drop-shadow(
+        0 -1px 5px rgba(255, 0, 0, 0.726)
+    );
+    transform: scaleX(1.2);
+    opacity: 1;
+}
+
+/* slider */
+
+
+
+.container {
+    padding: 4px;
+    background: black;
+    position: relative;
+    margin-top: 0;
+}
+
+.mySlides img {
+    width: 100%;
+    margin-left: 215px;
+}
+
+
+.mySlides {
+    display: block ;
+}
+
+
+.cursor {
+    cursor: pointer;
+}
+
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    top: 30%;
+    width: auto;
+    padding: 16px;
+    margin-top: 90px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/* Agregar reglas de medios para hacer responsive */
+
+/* Para pantallas más pequeñas */
+@media only screen and (max-width: 1020px) {
+
+    .logo {
+        height: -90px;
+    }
+
+    .logo img {
+      width: 80px; /* Reducir el tamaño del logo */
+      margin-left: 150px; /* Ajustar el margen izquierdo del logo */
+    }
+    
+    .logo ul {
+      margin-top: 40px; /* Ajustar el espacio entre el logo y el menú */
+    }
+    
+    .logo nav a {
+    position: absolute;
+    margin-left: -23px; /* Alinear los enlaces del menú al centro */
+     margin-top: -40px; /* Ajustar la posición vertical del menú */
+    }
+    
+    .target {
+      margin-top: -20px; /* Ajustar la posición vertical del subrayado del menú */
+      transform: translateX(30px); /* Ajustar la posición horizontal del subrayado del menú */
+    }
+
+    .logo nav li:not(:last-child) {
+        margin-right: 120px;
+    }
+    
+    .cuerpo {
+        width: auto;
+        height: auto; /* Ajustar la altura del cuerpo automáticamente */
+        padding: 20px; /* Agregar espacio alrededor del contenido */
+    }
+    
+    h1 {
+      font-size: 24px; /* Reducir el tamaño del título */
+      margin-right: 0; /* Eliminar el margen derecho del título */
+      margin-top: 20px; /* Ajustar el margen superior del título */
+      text-align: center; /* Centrar el texto */
+    }
+    
+    .cuerpo p {
+      position: static; /* Cambiar la posición del párrafo a estática */
+      margin: 2px auto; /* Centrar el párrafo */
+      font-size: 16px; /* Reducir el tamaño del texto */
+      max-width: 100%; /* Ajustar el ancho máximo del párrafo */
+      text-align: center; /* Centrar el texto */
+    }
+    
+    .button-play {
+      top: 50%; /* Ajustar la posición vertical del botón de reproducción */
+      left: 50%; /* Ajustar la posición horizontal del botón de reproducción */
+      transform: translate(-50%, -50%); /* Centrar el botón de reproducción */
+    }
+    
+    .button-play button {
+      padding: 8px 16px; /* Reducir el tamaño del botón */
+      font-size: 16px; /* Reducir el tamaño del texto del botón */
+    }
+
+    .mySlides img {
+        margin-left: 45px;
+    }
+
+
+}
+
+/* footer */
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    display: flex;
+    font-size: 24px;
+
+}
+
+.icon {
+    margin-top: -90px;
+    margin-right: 20px;
+    font-size: 1.2em;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #ffd700;
+    filter: drop-shadow(0 4px 8px rgba(255, 230, 0, 0.5));
+}
+
+.icon i {
+    transition: transform 0.3s ease;
+}
+
+.icon:hover i {
+    transform: scale(1.2);
+}
+
+p {
+    margin-top: -100px;
+    margin: 0;
+}
+
+p:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.recourses p,  .mail p , .tik-tok p, .rear p{
+    margin-left: -104px;
+    font-family: bold;
+    margin: 12px;
+}
+
+.hr__2 {
+    margin: 12px;
+    width: 100px;
+    opacity: 0.4;
+}
+
+.recourses img {
+    width: 100px;
+    margin-left: 250px;
+    margin-top: -290px;
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.815));
+}
